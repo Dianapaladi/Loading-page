@@ -1,1 +1,2 @@
-# Loading-page
+# Platforma de arta
+
