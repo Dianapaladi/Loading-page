@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending - ArtBook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="logo">ArtBook</div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search artwork...">
+        </div>
+        <ul class="nav-links">
+            <li><a href="trending.html">Trending</a></li>
+            <li><a href="popular.html" class="active">Popular</a></li>
+            <li><a href="creators.html">Creators</a></li>
+        </ul>
+    </nav>
+
+    <section class="trending-images">
+        <img src="Art7.jpg" alt="Artwork 7" class="img7">
+        <img src="Art8.jpg" alt="Artwork 8" class="img8">
+        <img src="Art9.jpg" alt="Artwork 9" class="img9">
+        <img src="Art10.jpg" alt="Artwork 10" class="img10">
+        <img src="Art11.jpg" alt="Artwork 11" class="img11">
+        <img src="Art12.jpg" alt="Artwork 12" class="img12">
+        <img src="Art13.jpg" alt="Artwork 13" class="img13">
+    </section>
+
+    <!-- ====== FEREASTRA DE COMENTARII ====== -->
+    <div class="comment-modal" id="commentModal">
+        <div class="comment-container">
+            <span class="close-btn" id="closeModal">&times;</span>
+
+            <div class="comment-left">
+                <img id="selectedImage" src="" alt="Selected artwork">
+            </div>
+
+            <div class="comment-right">
+                <h3>Comentarii</h3>
+                <div class="comments-list" id="commentsList"></div>
+
+                <textarea id="commentInput" placeholder="Scrie un comentariu..." rows="4"></textarea>
+                <button class="submit-comment" id="submitComment">Trimite</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArtBook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    <div class="logo">ArtBook</div>
+          <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search artwork...">
+  </div>
+    <ul class="nav-links">
+      <li><a href="trending.html">Trending</a></li>
+      <li><a href="popular.html">Popular</a></li>
+      <li><a href="creators.html"class="active">Creators</a></li>
+    </ul>
+  </nav>
+
+  <section class="trending-images">
+    <img src="Art14.jpg" alt="Artwork 14" class="img14">
+    <img src="Art15.jpg" alt="Artwork 15" class="img15">
+    <img src="Art16.jpg" alt="Artwork 16" class="img16">
+    <img src="Art17.jpg" alt="Artwork 17" class="img17">
+    <img src="Art18.jpg" alt="Artwork 18" class="img18">
+    <img src="Art19.jpg" alt="Artwork 19" class="img19">
+  </section>
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const images = document.querySelectorAll('.trending-images img');
+
+  searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toLowerCase();
+
+    images.forEach(img => {
+      const name = img.alt.toLowerCase() || img.src.toLowerCase();
+      if (name.includes(filter)) {
+        img.style.display = 'block';
+      } else {
+        img.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
